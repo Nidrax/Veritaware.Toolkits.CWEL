@@ -26,14 +26,14 @@ veritaware::Property<T>::~Property()
 template<class T>
 veritaware::Property<T> & operator<<(veritaware::Property<T> & lhs, const T & rhs)
 {
-	lhs.*_field = value;
-	lhs.Changed.Invoke(&lhs, EventArgs());
+	*(lhs._field) = rhs;
+	lhs.Changed.Invoke(&lhs, veritaware::EventArgs());
 	return lhs;
 }
 
 template<class T>
 veritaware::Property<T> & operator>>(veritaware::Property<T> & lhs, T & rhs)
 {
-	rhs = lhs.*_field;
+	rhs = *(lhs._field);
 	return lhs;
 }

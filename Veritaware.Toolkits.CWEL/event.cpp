@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "event.h"
 
 int veritaware::EventArgs::GetHashCode() const
@@ -26,7 +27,7 @@ veritaware::EventHandler & veritaware::EventHandler::operator+=(veritaware::call
 
 veritaware::EventHandler & veritaware::EventHandler::operator-=(veritaware::callback delegate)
 {
-	int i = 0;
+	size_t i = 0;
 	
 	for(auto & d : _delegates)
 	{
