@@ -159,6 +159,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="color.h" />
+    <ClInclude Include="event.h" />
     <ClInclude Include="hashing.h" />
     <ClInclude Include="shortns.h" />
     <ClInclude Include="stdafx.h" />
@@ -169,6 +170,7 @@
   <ItemGroup>
     <ClCompile Include="color.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="event.cpp" />
     <ClCompile Include="hashing.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
