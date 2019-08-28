@@ -39,6 +39,9 @@
     <ClInclude Include="event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="property.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -63,6 +66,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="property.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

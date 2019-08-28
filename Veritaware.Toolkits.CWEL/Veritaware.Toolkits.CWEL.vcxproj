@@ -161,6 +161,7 @@
     <ClInclude Include="color.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="hashing.h" />
+    <ClInclude Include="property.h" />
     <ClInclude Include="shortns.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="streaming.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="event.cpp" />
     <ClCompile Include="hashing.cpp" />
+    <ClCompile Include="property.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
