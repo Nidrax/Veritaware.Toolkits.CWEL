@@ -161,6 +161,7 @@
     <ClInclude Include="color.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="hashing.h" />
+    <ClInclude Include="object.h" />
     <ClInclude Include="property.h" />
     <ClInclude Include="shortns.h" />
     <ClInclude Include="stdafx.h" />
