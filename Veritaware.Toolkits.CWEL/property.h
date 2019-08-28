@@ -1,19 +1,24 @@
 #pragma once
 
-template <class T>
-class Property
+#include "event.h"
+
+namespace veritaware
 {
-public:
-	Property();
-	Property(T * field);
-	~Property();
+	template <class T>
+	class Property
+	{
+	public:
+		Property();
+		Property(T * field);
+		~Property();
 
-	friend Property& operator<<(Property& lhs, const T& rhs);
-	friend Property& operator>>(Property& lhs, T& rhs);
+		friend Property& operator<<(Property& lhs, const T& rhs);
+		friend Property& operator>>(Property& lhs, T& rhs);
 
-	//ToDo: Changed event
+		EventHandler Changed{};
 
-private:
-	bool _selfAloc;
-	T* _field;
-};
+	private:
+		bool _selfAloc;
+		T* _field;
+	};
+}

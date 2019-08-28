@@ -1,38 +1,38 @@
 #include "stdafx.h"
 #include "property.h"
 
-
 template<class T>
-Property<T>::Property()
+veritaware::Property<T>::Property()
 {
+
 	_field = new T();
 	_selfAloc = true;
 }
 
 template<class T>
-Property<T>::Property(T * field)
+veritaware::Property<T>::Property(T * field)
 {
 	_field = field;
 	_selfAloc = false;
 }
 
 template<class T>
-Property<T>::~Property()
+veritaware::Property<T>::~Property()
 {
 	if (_selfAloc)
 		delete _field;
 }
 
 template<class T>
-Property<T> & operator<<(Property<T> & lhs, const T & rhs)
+veritaware::Property<T> & operator<<(veritaware::Property<T> & lhs, const T & rhs)
 {
 	lhs.*_field = value;
-	//ToDo: Raise Changed event
+	lhs.Changed.Invoke(&lhs, EventArgs());
 	return lhs;
 }
 
 template<class T>
-Property<T> & operator>>(Property<T> & lhs, T & rhs)
+veritaware::Property<T> & operator>>(veritaware::Property<T> & lhs, T & rhs)
 {
 	rhs = lhs.*_field;
 	return lhs;
